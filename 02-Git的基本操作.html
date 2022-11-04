@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1、获取Git仓库的两种方法
+            (1)将尚未进行版本控制的本地目录转换为Git仓库
+            (2)从其他服务器克隆一个已经存在的Git仓库
+
+        2、在现有目录中初始化仓库
+            (1)在项目目录中，通过鼠标右键打开“Git Bash”
+            (2)执行git init命令将当前的目录转化为Git仓库
+
+        3、工作区中文件的4种状态:未跟踪，未修改，已修改，已暂存
+            Git操作的终极结果：让工作区中的文件都处于“未修改”状态
+
+        4、检查文件的状态---git status命令查看
+            (1)在状态报告中可以看到新建的index.html文件出现在Untracked files（未跟踪的文件）下面
+            (2)未跟踪文件意味着Git在之前的快照中没有这些文件，git不会自动将之纳入跟踪范围，
+                除非明确地告诉它“我需要使用git跟踪管理该文件”
+
+        5、以精简的方式显示文件状态---git status -s    -s是 -short的简写
+            在为跟踪文件之前会出现 红色的双问号？？
+
+        6、跟踪新文件---git add 01-Git的基础概念.html
+           跟踪完再运行git status -s   文件前面会出现 绿色的A 说明已被跟踪，处于暂存状态
+            clear清空终端内容
+
+        7、提交更新---git commit -m '新建了01-Git的基础概念.html文件'
+            -m后面的内容是本次的提交消息，用来对提交的内容做进一步的描述
+
+        8、文件最开始处于未跟踪状态，使用git add 文件名 可以把文件添加到暂存区
+           再使用git commit -m '新建了01-Git的基础概念.html文件' 把文件存到Git仓库中
+
+        9、对已提交的文件进行修改
+            把文件修改以后  文件前面会出现 红色的M  表示已跟踪文件内容已经被修改但是还未放到暂存区
+        
+        10、暂存已修改的文件---git add 01-Git的基础概念.html
+            (1)git add 命令是个多功能的命令：
+                《1》可以用它开始跟踪新文件
+                《2》把已跟踪且已修改的文件放到暂存区  （绿色的M）
+                《3》把有冲突的文件标记为已解决状态
+
+        11、提交已暂存的文件---git commit -m  “初始化了01-Git的基础概念.html文件的内容”
+
+        12、撤销对文件的修改---git checkout --文件名    危险性高，慎重操作
+            撤销操作的本质：用Git仓库中保存的文件，覆盖工作区中指定的文件
+        
+        13、向暂存区中一次性添加多个文件---git add . 
+
+        14、取消暂存的文件---git reset HEAD 要移除的文件名称
+    -->
+</body>
+</html>
